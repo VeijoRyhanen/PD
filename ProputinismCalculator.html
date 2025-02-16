@@ -74,10 +74,21 @@
 
 <body>
 
-  <h1>Proputinism Calculator v. 0.1</h1>
+  <h1>Putinism Detector v. 0.2</h1>
 
   <h2>I am...</h2>
-
+  <!-- Tippuvalikko otsikon valitsemiseen -->
+  <label for="titleSelector">Choose a title:</label>
+  <select id="titleSelector" onchange="changeTitle()">
+    <option value="Putinism Detector">Putinism Detector</option>
+    <option value="Proputinism Calculator">Proputinism Calculator</option>
+    <option value="Putinism-O-Meter">Putinism-O-Meter</option>
+    <option value="Proputinism Assessment">Proputinism Assessment</option>
+    <option value="Proputinism Analyzer">Proputinism Analyzer</option>
+    <option value="Putinism Scale">Putinism Scale</option>
+    <option value="Proputinism Quiz">Proputinism Quiz</option>
+  </select>
+	
   <div class="checkbox-group" id="checkboxGroup">
 
     <label><input type="checkbox" value="1"> antirenewable energy</label>
@@ -128,7 +139,13 @@
 
 
   <script>
-
+    // Funktio otsikon vaihtamiseen
+    function changeTitle() {
+      const titleSelector = document.getElementById('titleSelector');
+      const titleElement = document.getElementById('title');
+      titleElement.innerText = titleSelector.value;
+    }
+	  
     function calculateScore() {
 
       const checkboxes = document.querySelectorAll('#checkboxGroup input[type="checkbox"]');
