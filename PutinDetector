@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Proputinism Calculator v. 0.1</title>
+
+  <style>
+
+    body {
+
+      font-family: Arial, sans-serif;
+
+      margin: 20px;
+
+    }
+
+    h1 {
+
+      font-size: 24px;
+
+    }
+
+    h2 {
+
+      font-size: 18px;
+
+      margin-bottom: 10px;
+
+    }
+
+    .checkbox-group {
+
+      margin-bottom: 20px;
+
+    }
+
+    .checkbox-group label {
+
+      display: block;
+
+      margin: 5px 0;
+
+    }
+
+    button {
+
+      padding: 10px 20px;
+
+      font-size: 16px;
+
+      cursor: pointer;
+
+    }
+
+    .result {
+
+      margin-top: 20px;
+
+      font-size: 18px;
+
+      font-weight: bold;
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Putinism Detector v. 0.2</h1>
+
+  <h2>I am...</h2>
+  <!-- Tippuvalikko otsikon valitsemiseen -->
+  <label for="titleSelector">Choose a title:</label>
+  <select id="titleSelector" onchange="changeTitle()">
+    <option value="Putinism Detector">Putinism Detector</option>
+    <option value="Proputinism Calculator">Proputinism Calculator</option>
+    <option value="Putinism-O-Meter">Putinism-O-Meter</option>
+    <option value="Proputinism Assessment">Proputinism Assessment</option>
+    <option value="Proputinism Analyzer">Proputinism Analyzer</option>
+    <option value="Putinism Scale">Putinism Scale</option>
+    <option value="Proputinism Quiz">Proputinism Quiz</option>
+  </select>
+	
+  <div class="checkbox-group" id="checkboxGroup">
+
+    <label><input type="checkbox" value="1"> antirenewable energy</label>
+
+    <label><input type="checkbox" value="1"> antinuclear energy</label>
+
+    <label><input type="checkbox" value="1"> antivaxer</label>
+
+    <label><input type="checkbox" value="1"> antimasker</label>
+
+    <label><input type="checkbox" value="1"> antivegan</label>
+
+    <label><input type="checkbox" value="1"> antigender</label>
+
+    <label><input type="checkbox" value="1"> antifeminism</label>
+
+    <label><input type="checkbox" value="1"> anti intersectional feminism</label>
+
+    <label><input type="checkbox" value="1"> anti abortion</label>
+
+    <label><input type="checkbox" value="1"> anti immigration</label>
+
+    <label><input type="checkbox" value="1"> anticycling</label>
+
+    <label><input type="checkbox" value="1"> anti public transport</label>
+
+    <label><input type="checkbox" value="1"> anti union movement</label>
+
+    <label><input type="checkbox" value="1"> antitax</label>
+
+    <label><input type="checkbox" value="1"> anti science</label>
+
+    <label><input type="checkbox" value="1"> anti globalism</label>
+
+    <label><input type="checkbox" value="1"> free speech absolutist</label>
+
+    <label><input type="checkbox" value="1"> climate change denialist</label>
+
+    <label><input type="checkbox" value="1"> pro bitcoin</label>
+
+    <label><input type="checkbox" value="1"> pro Tяump</label>
+
+  </div>
+
+  <button onclick="calculateScore()">Calculate my putinism scores</button>
+
+  <div class="result" id="result"></div>
+
+
+  <script>
+    // Funktio otsikon vaihtamiseen
+    function changeTitle() {
+      const titleSelector = document.getElementById('titleSelector');
+      const titleElement = document.getElementById('title');
+      titleElement.innerText = titleSelector.value;
+    }
+	  
+    function calculateScore() {
+
+      const checkboxes = document.querySelectorAll('#checkboxGroup input[type="checkbox"]');
+
+      let totalPoints = 0;
+
+      let checkedPoints = 0;
+
+
+      checkboxes.forEach(checkbox => {
+
+        totalPoints += 1;
+
+        if (checkbox.checked) {
+
+          checkedPoints += 1;
+
+        }
+
+      });
+
+      const scores = checkedPoints;
+      const percentage    = ((checkedPoints / totalPoints) * 100).toFixed(2);
+	  const proukrainian = 100 - percentage;
+
+      document.getElementById('result').innerHTML = `I got <b>${scores}/20</b> point. My thinking is <b>${percentage}%</b> compatible with dictator Vladimir Vladimirovich Putin.<br>Conclusions:<br> <b>I am ${percentage}% Prorussian Proputinist!</b><br>I am ${proukrainian}% proukrainian!`;
+    }
+
+  </script>
+
+</body>
+
+</html>
