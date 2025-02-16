@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Proputinism Calculator v. 0.1</title>
+
+  <style>
+
+    body {
+
+      font-family: Arial, sans-serif;
+
+      margin: 20px;
+
+    }
+
+    h1 {
+
+      font-size: 24px;
+
+    }
+
+    h2 {
+
+      font-size: 18px;
+
+      margin-bottom: 10px;
+
+    }
+
+    .checkbox-group {
+
+      margin-bottom: 20px;
+
+    }
+
+    .checkbox-group label {
+
+      display: block;
+
+      margin: 5px 0;
+
+    }
+
+    button {
+
+      padding: 10px 20px;
+
+      font-size: 16px;
+
+      cursor: pointer;
+
+    }
+
+    .result {
+
+      margin-top: 20px;
+
+      font-size: 18px;
+
+      font-weight: bold;
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Proputinism Calculator v. 0.1</h1>
+
+  <h2>I am...</h2>
+
+  <div class="checkbox-group" id="checkboxGroup">
+
+    <label><input type="checkbox" value="1"> antirenewable energy</label>
+
+    <label><input type="checkbox" value="1"> antinuclear energy</label>
+
+    <label><input type="checkbox" value="1"> antivaxer</label>
+
+    <label><input type="checkbox" value="1"> antimasker</label>
+
+    <label><input type="checkbox" value="1"> antigender</label>
+
+    <label><input type="checkbox" value="1"> antifeminism</label>
+
+    <label><input type="checkbox" value="1"> anti intersectional feminism</label>
+
+    <label><input type="checkbox" value="1"> anti abortion</label>
+
+    <label><input type="checkbox" value="1"> anti immigration</label>
+
+    <label><input type="checkbox" value="1"> anticycling</label>
+
+    <label><input type="checkbox" value="1"> anti public transport</label>
+
+    <label><input type="checkbox" value="1"> anti union movement</label>
+
+    <label><input type="checkbox" value="1"> antitax</label>
+
+    <label><input type="checkbox" value="1"> anti science</label>
+
+    <label><input type="checkbox" value="1"> anti globalism</label>
+
+    <label><input type="checkbox" value="1"> free speech absolutist</label>
+
+    <label><input type="checkbox" value="1"> Climate change denial</label>
+
+    <label><input type="checkbox" value="1"> pro bitcoin</label>
+
+    <label><input type="checkbox" value="1"> pro Tяump</label>
+
+  </div>
+
+  <button onclick="calculateScore()">Calculate my putinism scores</button>
+
+  <div class="result" id="result"></div>
+
+
+  <script>
+
+    function calculateScore() {
+
+      const checkboxes = document.querySelectorAll('#checkboxGroup input[type="checkbox"]');
+
+      let totalPoints = 0;
+
+      let checkedPoints = 0;
+
+
+      checkboxes.forEach(checkbox => {
+
+        totalPoints += 1;
+
+        if (checkbox.checked) {
+
+          checkedPoints += 1;
+
+        }
+
+      });
+
+
+      const percentage = ((checkedPoints / totalPoints) * 100).toFixed(2);
+
+      document.getElementById('result').innerText = `Conclusion: I am ${percentage}% Proputinist`;
+
+    }
+
+  </script>
+
+</body>
+
+</html>
