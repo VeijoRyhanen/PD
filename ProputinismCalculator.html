@@ -114,7 +114,7 @@
 
     <label><input type="checkbox" value="1"> free speech absolutist</label>
 
-    <label><input type="checkbox" value="1"> Climate change denial</label>
+    <label><input type="checkbox" value="1"> climate change denialist</label>
 
     <label><input type="checkbox" value="1"> pro bitcoin</label>
 
@@ -151,10 +151,10 @@
       });
 
 
-      const percentage = ((checkedPoints / totalPoints) * 100).toFixed(2);
+      const percentage    = ((checkedPoints / totalPoints) * 100).toFixed(2);
+	  const antiukrainian = 100 - percentage;
 
-      document.getElementById('result').innerText = `Conclusion: I am ${percentage}% Proputinist`;
-
+      document.getElementById('result').innerText = `My thinking is ${percentage}% compatible with Vladimir Vladimirovich Putin.<br>Conclusions: <bold>I am ${percentage}% Proputinist!</bold><br><bold>I am ${antiukrainian}% antiukrainian!`;
     }
 
   </script>
