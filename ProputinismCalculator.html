@@ -150,11 +150,11 @@
 
       });
 
-
+      const scores = checkedPoints;
       const percentage    = ((checkedPoints / totalPoints) * 100).toFixed(2);
 	  const antiukrainian = 100 - percentage;
 
-      document.getElementById('result').innerHTML = `My thinking is ${percentage}% compatible with Vladimir Vladimirovich Putin.<br>Conclusions: <bold>I am ${percentage}% Prorussian Proputinist!</bold><br><bold>I am ${antiukrainian}% antiukrainian!`;
+      document.getElementById('result').innerHTML = `I got ${scores}/20 point. My thinking is ${percentage}% compatible with dictator Vladimir Vladimirovich Putin.<br>Conclusions:<br> <bold>I am ${percentage}% Prorussian Proputinist!</bold><br>I am ${antiukrainian}% antiukrainian!`;
     }
 
   </script>
