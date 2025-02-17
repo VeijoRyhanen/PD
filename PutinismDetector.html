@@ -197,11 +197,13 @@
         "Pro Bitcoin",
         "Pro Trump"
       ];
-      checkboxes.forEach((label, index) => {
+      labels.forEach((label, index) => {
+        // Päivitetään vain tekstiosuus, ei checkboxia
+        const checkbox = label.querySelector('input[type="checkbox"]');
         if (deepseekFormat) {
-          label.innerText = formattedTexts[index];
+          label.innerHTML = `${checkbox.outerHTML} ${formattedTexts[index]}`;
         } else {
-          label.innerText = originalTexts[index];
+          label.innerHTML = `${checkbox.outerHTML} ${originalTexts[index]}`;
         }
       });
     }
