@@ -87,6 +87,10 @@
     <option value="Putinism Scale">Putinism Scale</option>
     <option value="Proputinism Quiz">Proputinism Quiz</option>
   </select>
+  <!-- DeepSeek formatted text -valinta -->
+  <label>
+    <input type="checkbox" id="deepseekFormat" onchange="toggleFormat()"> DeepSeek formatted text
+  </label>
   <h2>I am...</h2>
   <div class="checkbox-group" id="checkboxGroup">
 
@@ -143,6 +147,63 @@
       const titleSelector = document.getElementById('titleSelector');
       const titleElement = document.getElementById('title');
       titleElement.innerText = titleSelector.value;
+    }
+
+    // DeepSeek-formaatin vaihtaminen
+    function toggleFormat() {
+      const deepseekFormat = document.getElementById('deepseekFormat').checked;
+      const checkboxes = document.querySelectorAll('#checkboxGroup label');
+
+      const originalTexts = [
+        "antirenewable energy",
+        "antinuclear energy",
+        "antivaxer",
+        "antimasker",
+        "antigender",
+        "antifeminism",
+        "anti intersectional feminism",
+        "anti abortion",
+        "anti immigration",
+        "anticycling",
+        "anti public transport",
+        "anti union movement",
+        "antitax",
+        "anti science",
+        "anti globalism",
+        "free speech absolutist",
+        "Climate change denial",
+        "pro bitcoin",
+        "pro Tяump"
+      ];
+
+      const formattedTexts = [
+        "Against renewable energy",
+        "Against nuclear energy",
+        "Anti-vaccine",
+        "Anti-mask",
+        "Against gender ideology",
+        "Anti-feminism",
+        "Against intersectional feminism",
+        "Anti-abortion",
+        "Against immigration",
+        "Against cycling",
+        "Against public transport",
+        "Against labor unions",
+        "Anti-tax",
+        "Anti-science",
+        "Against globalism",
+        "Free speech absolutist",
+        "Climate change denier",
+        "Pro Bitcoin",
+        "Pro Trump"
+      ];
+      checkboxes.forEach((label, index) => {
+        if (deepseekFormat) {
+          label.innerText = formattedTexts[index];
+        } else {
+          label.innerText = originalTexts[index];
+        }
+      });
     }
 	  
     function calculateScore() {
