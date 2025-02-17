@@ -149,16 +149,17 @@
       titleElement.innerText = titleSelector.value;
     }
 
-    // DeepSeek-formaatin vaihtaminen
+        // DeepSeek-formaatin vaihtaminen
     function toggleFormat() {
       const deepseekFormat = document.getElementById('deepseekFormat').checked;
-      const checkboxes = document.querySelectorAll('#checkboxGroup label');
+      const labels = document.querySelectorAll('#checkboxGroup label');
 
       const originalTexts = [
         "antirenewable energy",
         "antinuclear energy",
         "antivaxer",
         "antimasker",
+	"antivegan",
         "antigender",
         "antifeminism",
         "anti intersectional feminism",
@@ -181,6 +182,7 @@
         "Against nuclear energy",
         "Anti-vaccine",
         "Anti-mask",
+	"Against veganism",
         "Against gender ideology",
         "Anti-feminism",
         "Against intersectional feminism",
@@ -197,6 +199,7 @@
         "Pro Bitcoin",
         "Pro Trump"
       ];
+
       labels.forEach((label, index) => {
         const checkbox = label.querySelector('input[type="checkbox"]');
         const isChecked = checkbox.checked; // Tallennetaan checkboxin tila
