@@ -1,5 +1,4 @@
-# PD
-**Putinism Detector, **, aka.:<br> 
+# PD - **Putinism Detector**<br> 
 Proputinism meter, Putinism-O-meter, Putinism Scale, Putinism Index, Putinism Quiz,
 Putinism Assesment, Putinism Evaluation, Putinism Analyzer, Putinism Profiler, Proputinism Diagnostic,
 Proputinism Check, Proputinism Test, Proputinism Scoregard, Prpputinism Gauge, Proputinism Indicator<br>
