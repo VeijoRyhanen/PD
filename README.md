@@ -2,6 +2,6 @@
 Proputinism meter, Putinism-O-meter, Putinism Scale, Putinism Index, Putinism Quiz,
 Putinism Assesment, Putinism Evaluation, Putinism Analyzer, Putinism Profiler, Proputinism Diagnostic,
 Proputinism Check, Proputinism Test, Proputinism Scoregard, Proputinism Gauge, Proputinism Indicator<br>
-Calculate my Proputinism compatible thinking. 
+Calculate my Proputinism compatible thinking.<br>
 Open quiz: [PutinismDetector](https://veijoryhanen.github.io/PD/PutinismDetector.html)
 
